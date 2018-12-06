@@ -1,0 +1,122 @@
+<div style="margin: 30px">
+
+  <mat-card style="padding-bottom: 0%">
+    <div class="row">
+      <div class="col-md-2">
+        <img style="width: 80px;padding-bottom: 20px;"
+             src="http://gridsystems.net/wp-content/uploads/2015/12/Grid-Systems-Logo-Transparent-for-Website-224-x-97-Final.png">
+      </div>
+      <div class="col-md-8">
+        <mat-form-field class="example-full-width">
+          <input #assocciation mdInput type="number" [(ngModel)]="association" matInput placeholder="Search For Association">
+        </mat-form-field>
+      </div>
+      <div class="col-md-2">
+        <button mat-button  style=" background-color: rgba(0, 0, 158, 0.2);" (click)="getReport(assocciation.value)">Search</button>
+      </div>
+    </div>
+  </mat-card>
+  <div>
+    <mat-card *ngIf="hasData" >
+      <div style="align-content: center">
+        <mat-form-field>
+          <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+        </mat-form-field>
+      </div>
+      <button  mat-button class="btn" (click)="Save(540)">Save</button>
+    </mat-card>
+    <table style="width: 100%;font-size: 9px;  word-wrap: break-word;
+    white-space: pre-wrap; " mat-table [dataSource]="datasource">
+
+      <!--  Column -->
+      <ng-container matColumnDef="InvoiceId">
+        <th mat-header-cell *matHeaderCellDef> InvoiceId </th>
+        <td mat-cell *matCellDef="let element"> {{element['Invoice ID']}} </td>
+      </ng-container>
+      <!--  Column -->
+      <ng-container matColumnDef="LogId">
+        <th mat-header-cell *matHeaderCellDef> LogId </th>
+        <td mat-cell *matCellDef="let element"> {{element['Log ID']}} </td>
+      </ng-container>
+      <!--  Column -->
+      <ng-container matColumnDef="Invoice">
+        <th mat-header-cell *matHeaderCellDef> Invoice </th>
+        <td mat-cell *matCellDef="let element"> {{element['Invoice Number']}} </td>
+      </ng-container>
+      <!--  Column -->
+      <ng-container matColumnDef="Number">
+        <th mat-header-cell *matHeaderCellDef> Number </th>
+        <td mat-cell *matCellDef="let element"> {{element['Voucher Number']}} </td>
+      </ng-container>
+      <!--  Column -->
+      <ng-container matColumnDef="Code">
+        <th mat-header-cell *matHeaderCellDef> Vendor Code </th>
+        <td mat-cell *matCellDef="let element"> {{element['Vendor Code']}} </td>
+      </ng-container>
+      <!--  Column -->
+      <ng-container matColumnDef="Vendor">
+        <th mat-header-cell *matHeaderCellDef> Vendor Name </th>
+        <td mat-cell *matCellDef="let element"> {{element['Vendor Name']}} </td>
+      </ng-container>
+      <!--  Column -->
+      <ng-container matColumnDef="Association">
+        <th mat-header-cell *matHeaderCellDef> Association Name </th>
+        <td mat-cell *matCellDef="let element"> {{element["Association Name"]}} </td>
+      </ng-container>
+
+      <!--  Column -->
+      <ng-container matColumnDef="Sources">
+        <th mat-header-cell *matHeaderCellDef>Sources</th>
+        <td mat-cell *matCellDef="let element"> {{element["Sources"]}} </td>
+      </ng-container>
+
+      <!--  Column -->
+      <ng-container matColumnDef="Invoice_Amount">
+        <th mat-header-cell *matHeaderCellDef>Amount</th>
+        <td mat-cell *matCellDef="let element"> {{element["Invoice_Amount"]}} </td>
+      </ng-container>
+
+      <!--  Column -->
+      <ng-container matColumnDef="Date">
+        <th mat-header-cell *matHeaderCellDef>Date</th>
+        <td mat-cell *matCellDef="let element"> {{element["Date"]}} </td>
+      </ng-container>
+
+      <!--  Column -->
+      <ng-container matColumnDef="ModifiedDate">
+        <th mat-header-cell *matHeaderCellDef>ModifiedDate</th>
+        <td mat-cell *matCellDef="let element"> {{element["ModifiedDate"]}} </td>
+      </ng-container>
+      <!--  Column -->
+      <ng-container matColumnDef="Name">
+        <th mat-header-cell *matHeaderCellDef> Name </th>
+        <td mat-cell *matCellDef="let element"> {{element["Name"]}} </td>
+      </ng-container>
+
+      <!--  Column -->
+
+      <ng-container matColumnDef="ModifiedBy">
+
+        <th mat-header-cell *matHeaderCellDef>
+          ModifiedBy
+        </th>
+        <td mat-cell *matCellDef="let element"> {{element["ModifiedBy"]}} </td>
+
+      </ng-container>
+
+      <!--  Column -->
+      <!--<ng-container matColumnDef="Note">
+      <th mat-header-cell *matHeaderCellDef> Note </th>
+      <td mat-cell *matCellDef="let element"> {{element["Note"]}} </td>
+    </ng-container>-->
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+  </div>
+
+</div>
+
+
