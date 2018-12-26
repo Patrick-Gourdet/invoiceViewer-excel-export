@@ -16,22 +16,5 @@ namespace InvoiceRDAL
             }
             return JsonConvert.SerializeObject(db,Formatting.Indented);
         }
-        public static Workbook SetEmpty1(Workbook workBook) 
-        {
-            try
-            {
-                if (workBook.Sheets.Count.Equals(0))
-                {
-                    
-                    return null;
-                }
-                return workBook;
-            }
-            catch (Exception e)
-            {
-                throw new TypeInitializationException("Crap",e);
-            }
-
-        }
     }
 }

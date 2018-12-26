@@ -92,18 +92,18 @@ namespace InvoiceReportsUI
 
 
             // Enforce https during production. To quickly enable ssl during development. Go to: Project Properties->Debug->Enable SSL
-            //if (!_hostingEnvironment.IsDevelopment())
-            //    services.Configure<MvcOptions>(options => options.Filters.Add(new RequireHttpsAttribute()));
+            if (!_hostingEnvironment.IsDevelopment())
+                services.Configure<MvcOptions>(options => options.Filters.Add(new RequireHttpsAttribute()));
 
 
             //Todo: ***Using DataAnnotations for validation until Swashbuckle supports FluentValidation***
             //services.AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<Startup>());
 
 
-            //.AddJsonOptions(opts =>
-            //{
-            //    opts.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
-            //});
+            .AddJsonOptions(opts =>
+            {
+                opts.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+            });
 
 
 
@@ -137,9 +137,9 @@ namespace InvoiceReportsUI
             else
             {
                 // Enforce https during production
-                //var rewriteOptions = new RewriteOptions()
-                //    .AddRedirectToHttps();
-                //app.UseRewriter(rewriteOptions);
+                var rewriteOptions = new RewriteOptions()
+                    .AddRedirectToHttps();
+                app.UseRewriter(rewriteOptions);
 
 
                 app.UseExceptionHandler("/Home/Error");

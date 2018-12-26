@@ -18,14 +18,12 @@ namespace InvoiceRDAL
 
                 ExcelPackage excel = new ExcelPackage();
 
-
-                var worksheet = excel.Workbook.Worksheets.Add("Worksheet1");
-                worksheet.Cells["A1"].LoadFromDataTable(dsUndeliverables.Tables[0], true);
-                var stream = new MemoryStream(excel.GetAsByteArray(),0,0,true,true);
-
-                var g  = stream.GetBuffer();
-                stream.Position = 0;
-                return g;
+                var workSheet = excel.Workbook.Worksheets.Add("Worksheet1");
+                workSheet.Cells["A1"].LoadFromDataTable(dsUndeliverables.Tables[0], true);
+                workSheet.Cells.AutoFitColumns();
+                workSheet.Cells.Style.HorizontalAlignment = OfficeOpenXml.Style.ExcelHorizontalAlignment.Right;
+                excel.Save();
+                return excel.GetAsByteArray();
             }            
         
             catch (Exception e)

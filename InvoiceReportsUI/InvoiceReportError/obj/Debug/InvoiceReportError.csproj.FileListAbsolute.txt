@@ -22,3 +22,15 @@ C:\WORK\InvoiceReportsUI\InvoiceReportError\obj\Debug\InvoiceReportError.csproj.
 C:\WORK\InvoiceReportsUI\InvoiceReportError\obj\Debug\InvoiceReportError.dll
 C:\WORK\InvoiceReportsUI\InvoiceReportError\obj\Debug\InvoiceReportError.pdb
 C:\WORK\InvoiceReportsUI\InvoiceReportError\obj\Debug\InvoiceReportError.csprojAssemblyReference.cache
+C:\Users\pgourdet\Documents\invoiceViewer-excel-export\InvoiceReportsUI\InvoiceReportError\bin\Debug\InvoiceReportError.dll.config
+C:\Users\pgourdet\Documents\invoiceViewer-excel-export\InvoiceReportsUI\InvoiceReportError\bin\Debug\InvoiceReportError.dll
+C:\Users\pgourdet\Documents\invoiceViewer-excel-export\InvoiceReportsUI\InvoiceReportError\bin\Debug\InvoiceReportError.pdb
+C:\Users\pgourdet\Documents\invoiceViewer-excel-export\InvoiceReportsUI\InvoiceReportError\bin\Debug\EntityFramework.dll
+C:\Users\pgourdet\Documents\invoiceViewer-excel-export\InvoiceReportsUI\InvoiceReportError\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\pgourdet\Documents\invoiceViewer-excel-export\InvoiceReportsUI\InvoiceReportError\bin\Debug\EntityFramework.xml
+C:\Users\pgourdet\Documents\invoiceViewer-excel-export\InvoiceReportsUI\InvoiceReportError\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\pgourdet\Documents\invoiceViewer-excel-export\InvoiceReportsUI\InvoiceReportError\obj\Debug\InvoiceReportError.csprojAssemblyReference.cache
+C:\Users\pgourdet\Documents\invoiceViewer-excel-export\InvoiceReportsUI\InvoiceReportError\obj\Debug\InvoiceReportError.csproj.CoreCompileInputs.cache
+C:\Users\pgourdet\Documents\invoiceViewer-excel-export\InvoiceReportsUI\InvoiceReportError\obj\Debug\InvoiceReportError.csproj.CopyComplete
+C:\Users\pgourdet\Documents\invoiceViewer-excel-export\InvoiceReportsUI\InvoiceReportError\obj\Debug\InvoiceReportError.dll
+C:\Users\pgourdet\Documents\invoiceViewer-excel-export\InvoiceReportsUI\InvoiceReportError\obj\Debug\InvoiceReportError.pdb

@@ -12,11 +12,5 @@ namespace InvoiceRDAL.Data
         {
             return InvoiceDataAccessLayer.GetAllAssociationVendorInvoices(assosicationID);
         }
-        public static byte[] SaveInvoice(int assosicationID)
-        {
-            var g = InvoiceDataAccessLayer.CreateExcel(assosicationID);
-
-            return g;
-        }
     }
 }
